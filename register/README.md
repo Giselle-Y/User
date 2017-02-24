@@ -13,9 +13,9 @@ register
 ### html文件 
 	<form name="LoginForm" method="post" action="login.php" onSubmit="return InputCheck(this)”>
 		<p>
-			<label for="username" class="label">用户名:<label\>
+			<label for="username" class="label">用户名:</label>
 			<input id="username" name="username" type="text" class="input" />
-			<span>(必填，3-15字符长度，支持汉字、字母、数字及_)<span\>
+			<span>(必填，3-15字符长度，支持汉字、字母、数字及_)</span>
 		</p>
 		<p>
 			…… 
@@ -29,7 +29,7 @@ register
 			{ 		
 				font-size:12px;			
 			}		
-       			form		
+       		form		
 			{		
 				width:520px;		
 				margin: 0 auto;		
