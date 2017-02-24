@@ -11,19 +11,26 @@ register
 * ……
 
 ### html文件 
-<form name="LoginForm" method="post" action="login.php" onSubmit="return InputCheck(this)”>   <br />
+<form name="LoginForm" method="post" action="login.php" onSubmit="return InputCheck(this)”\><br />
 	<p>  <br />
-		<label for="username" class="label">用户名:</label>  <br />
+		<label for="username" class="label">用户名:</label\><br />
 		<input id="username" name="username" type="text" class="input" />  <br />
 		<span>(必填，3-15字符长度，支持汉字、字母、数字及_)</span>  <br />
 	<p/>  <br />
 	<p>  <br />
 		……  <br />
 	<p/>  <br />
-</form>  
+</form> 
+<form>
+    <p>
+	<label for="username" class="label">用户名:</label\>
+	<input id="username" name="username" type="text" class="input" />
+	<span>(必填，3-15字符长度，支持汉字、字母、数字及_)</span>
+    <p>
+</form> 
 
 ### css文件 
-		<style type="text/css">		
+	<style type="text/css">		
 			html		
 			{ 		
 				font-size:12px;			
@@ -34,10 +41,10 @@ register
 				margin: 0 auto;		
 			}		
  			……		
-		</style>				
+	</style>				
 
 ### js文件 
-function InputCheck(RegForm){			
+	function InputCheck(RegForm){			
 			if (RegForm.username.value == ""){			
 				alert("用户名不可为空!");			
     				RegForm.username.focus();		
