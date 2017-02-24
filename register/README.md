@@ -12,40 +12,35 @@ register
 
 ### html文件 
 ……
-<form name="LoginForm" method="post" action="login.php" onSubmit="return InputCheck(this)">
-	<p>
-		<label for="username" class="label">用户名:</label>
-		<input id="username" name="username" type="text" class="input" />
-		<span>(必填，3-15字符长度，支持汉字、字母、数字及_)</span>
-	<p/>
-	<p>
-		……
-	<p/>
-</form>
+<form name="LoginForm" method="post" action="login.php" onSubmit="return InputCheck(this)”>\<br /\>  
+	<p>\<br /\> 
+		<label for="username" class="label">用户名:</label>\<br /\> 
+		<input id="username" name="username" type="text" class="input" />\<br /\> 
+		<span>(必填，3-15字符长度，支持汉字、字母、数字及_)</span>\<br /\> 
+	<p/>\<br /\> 
+	<p>\<br /\> 
+		……\<br /\> 
+	<p/>\<br /\> 
+</form>\<br /\> 
 ……
 
 ### css文件 
-<style type="text/css">
-       html
-	{
-		font-size:12px;
-	}
-       form
-	{
-		width:520px; 
-		margin: 0 auto;
-	}
-       legend
-	{
-		font-weight:bold; 
-		font-size:14px;
-	}
-       label
-	{
-		float:left; 
-		width:70px; 
-		margin-left:10px;
-	}
+<style type="text/css">\<br /\> 
+       html<br /> 
+	{<br /> 
+		font-size:12px;<br /> 
+	}<br /> 
+       form<br /> 
+	{<br /> 
+		width:520px;<br />  
+		margin: 0 auto;<br /> 
+	}<br /> 
+       label<br /> 
+	{<br /> 
+		float:left;<br />  
+		width:70px;<br /> 
+		margin-left:10px;<br /> 
+	}<br /> 
        ……
 </style>
 
@@ -64,7 +59,6 @@ function InputCheck(RegForm)
 ……
 
 ### php文件 
-……
 $password = MD5($password);
 $regdate = time();
 $sql = "INSERT INTO user(username,password,email,regdate)VALUES('$username','$password','$email',
@@ -76,4 +70,3 @@ else {
     echo '抱歉！添加数据失败：',mysql_error(),'<br />';
     echo '点击此处 <a href="javascript:history.back(-1);">返回</a> 重试';
 }
-……
