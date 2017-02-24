@@ -13,9 +13,9 @@ register
 ### html文件 
 	<form name="LoginForm" method="post" action="login.php" onSubmit="return InputCheck(this)”>
 		<p>
-			<label for="username" class="label">用户名:</label\>
+			<label for="username" class="label">用户名:<label\>
 			<input id="username" name="username" type="text" class="input" />
-			<span>(必填，3-15字符长度，支持汉字、字母、数字及_)</span\>
+			<span>(必填，3-15字符长度，支持汉字、字母、数字及_)<span\>
 		</p>
 		<p>
 			…… 
@@ -52,7 +52,7 @@ register
 ### php文件 
 	$password = MD5($password);		
 	$regdate = time();		
-	$sql = "INSERT INTO 	user(username,password,email,regdate)VALUES('$username','$password','$email',
+	$sql = "INSERT INTO user(username,password,email,regdate)VALUES('$username','$password','$email',
 	$regdate)";	
 	if(mysql_query($sql,$conn)){		
     			exit('用户注册成功！点击此处 <a href=“#”>登录</a>');}		 		
