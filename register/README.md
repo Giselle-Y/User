@@ -11,16 +11,16 @@ register
 * ……
 
 ### html文件 
-<form name="LoginForm" method="post" action="login.php" onSubmit="return InputCheck(this)”\><br />
-	<p\><br />
-		<label for="username" class="label">用户名:</label\><br />
-		<input id="username" name="username" type="text" class="input" /\><br />
-		<span>(必填，3-15字符长度，支持汉字、字母、数字及_)</span\><br />
-	<p/\><br />
-	<p\>  <br />
-		……  <br />
-	<p/\>  <br />
-</form> 
+	<form name="LoginForm" method="post" action="login.php" onSubmit="return InputCheck(this)”\>
+		\<p\><br />
+			<label for="username" class="label">用户名:</label\><br />
+			<input id="username" name="username" type="text" class="input" />\<br />
+			<span>(必填，3-15字符长度，支持汉字、字母、数字及_)</span\><br />
+		\</p\><br />
+		\<p\>  <br />
+			……  <br />
+		\</p\> <br />
+		</form> 
 
 
 ### css文件 
@@ -50,14 +50,14 @@ register
   
 
 ### php文件 
-$password = MD5($password);		
-$regdate = time();		
-$sql = "INSERT INTO user(username,password,email,regdate)VALUES('$username','$password','$email',		
+	$password = MD5($password);		
+	$regdate = time();		
+	$sql = "INSERT INTO user(username,password,email,regdate)VALUES('$username','$password','$email',
 $regdate)";	
   
 	
-if(mysql_query($sql,$conn)){		
-    		exit('用户注册成功！点击此处 <a href=“#”>登录</a>');}		 		
-else {		
-    		echo '抱歉！添加数据失败：’,mysql_error();’		
-    		echo '点击此处 <a href="javascript:history.back(-1);">返回</a> 重试';}					
+	if(mysql_query($sql,$conn)){		
+    			exit('用户注册成功！点击此处 <a href=“#”>登录</a>');}		 		
+	else {		
+    			echo '抱歉！添加数据失败：’,mysql_error();’		
+    			echo '点击此处 <a href="javascript:history.back(-1);">返回</a> 重试';}					
